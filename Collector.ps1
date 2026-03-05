@@ -1,3 +1,6 @@
+$ErrorActionPreference = "Continue"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$currentUser = $env:USERNAME
 $downloadsPath = "C:\Users\$currentUser\Downloads"
 $zipPath       = Join-Path $downloadsPath "Collector.zip"
 $extractPath   = Join-Path $downloadsPath "Collector"
